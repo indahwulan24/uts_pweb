@@ -14,6 +14,13 @@ export default {
     }
   },
 
+  watch: {
+    $route() {
+      this.getSurah();
+      this.getInfoSurah();
+    }
+  },
+
   mounted()
   {
     this.getSurah()
