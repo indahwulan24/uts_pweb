@@ -113,7 +113,7 @@ export default {
           {{ ayat?.text_uthmani }}{{ ayat?.verse_key }}
         </h5>
         <!-- <p v-html="translates[i]?.text" class="translate"></p> -->
-        <p class="card-title text-end">{{ translates[i]?.text }}</p>
+        <p class="card-title text-start">{{ translates[i]?.text }}</p>
       </div>
     </div>
 </template>
