@@ -6,12 +6,12 @@ export default {
   data()
   {
     return {
-      cari: '1',
+      cari: "",
       surah: ref([]),
       judul: ref([]),
       name: [],
       translates: ref([]),
-      audio: ref([]),
+      audio: "",
     }
   },
 
@@ -39,7 +39,7 @@ export default {
       axios.get('https://api.quran.com/api/v4/quran/verses/uthmani?chapter_number=' + this.cari)
         .then(response =>
         {
-          this.surah = response.data.verses
+          this.surah = response.data.verses;
         })
         .catch(error =>
         {
@@ -92,21 +92,22 @@ export default {
 <template>
   <div class="text-center">
     <h1>Masukkan Nomor Surah!</h1>
-    <input v-model="cari" class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+    <input v-model="cari" class="form-control me-2" type="ayat" placeholder="Ayat" aria-label="Ayat">
     <div class="mt-5">
-      <h1>{{ judul.name_complex }}</h1>
+      <h1>{{ judul?.name_complex }}</h1>
       <br>
-      <h1>{{ name.name }}</h1>
+      <h1>{{ name?.name }}</h1>
       <br>
-      <h2>Diturunkan di : {{ judul.revelation_place }}</h2>
+      <h2>Diturunkan di : {{ judul?.revelation_place }}</h2>
     </div>
     <div class= "mt-5" v-if ="audio">
-      <audio v-bind:src="audio.audio_url" controls></audio>
+      <audio v-bind:src="audio?.audio_url" controls></audio>
     </div>
     <div v-for="(ayat,i) in surah" :key="i" class=" card">
       <div class="card-body ">
-        <h5 class = "card-title ayat">{{ ayat.text_uthmani }}{{ayat.verse_key}}</h5>
-        <p v-html="translates[i].text" class="translate"></p>
+        <h5 class = "card-title ayat">{{ ayat?.text_uthmani }}{{ayat?.verse_key}}</h5>
+        <p v-html="translates[i]?.text" class="translate"></p>
+        <p class="card-title text-end">{{translates[i]?.text}}</p>
       </div>
     </div>
   </div>

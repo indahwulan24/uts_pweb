@@ -10,6 +10,13 @@ export default {
     }
   },
 
+  watch : {
+    $route() {
+      this.getJuz();
+      this.getIsiJuz();
+    }
+  },
+
   mounted() {
     this.getJuz()
     this.getIsiJuz()
