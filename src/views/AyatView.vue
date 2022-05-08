@@ -103,9 +103,11 @@ export default {
     <div class= "mt-5" v-if ="audio">
       <audio v-bind:src="audio.audio_url" controls></audio>
     </div>
-    <div v-for="(ayat,i) in surah" :key="i" class=" mt-4">
-      <h5 class = "ayat">{{ ayat.text_uthmani }}{{ayat.verse_key}}</h5>
-      <p class = "translate" v-html="translates[i].text"></p>
+    <div v-for="(ayat,i) in surah" :key="i" class=" card">
+      <div class="card-body ">
+        <h5 class = "card-title ayat">{{ ayat.text_uthmani }}{{ayat.verse_key}}</h5>
+        <p v-html="translates[i].text" class="translate"></p>
+      </div>
     </div>
   </div>
 </template>
