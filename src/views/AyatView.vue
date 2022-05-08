@@ -119,18 +119,7 @@ export default {
 </template>
 
 <style scoped>
-.ayat {
-  margin-top: 25px;
-  font-weight: bold;
-  font-size: 20px;
-  text-align: end;
-}
-.translate {
-  margin-top: 25px;
-  font-weight: bold;
-  font-size: 17px;
-  text-align: start;
-}
+
 h1,
 h2 {
   margin-top: 5px;
