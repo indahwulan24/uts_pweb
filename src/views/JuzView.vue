@@ -51,6 +51,7 @@ export default {
 
 <template>
   <div class="text-center mt-5">
+    <img src="../assets/alquran.png" alt="logo" width="350">
     <h2>Juz {{ $route.params.id }}</h2>
     <h4 v-for="quran in isijuzs" :key="quran.id" class="text-end mt-5">
       {{quran.text_uthmani}} {{quran.verse_key}}
@@ -63,6 +64,6 @@ h4 {
   font-size: 20px;
 }
 h2 {
-  color: #288a52;
+  color: #2d335b;
 }
 </style>

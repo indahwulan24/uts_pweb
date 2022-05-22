@@ -63,7 +63,8 @@ export default {
 
 <template>
   <div class="text-center">
-    <h1>Surah {{ surah?.name_complex }}</h1>
+    <img src="../assets/alquran.png" alt="logo" width="350">
+    <h1>Surah {{ surah.name_complex }}</h1>
     <div v-html="info"></div>
   </div>
 </template>

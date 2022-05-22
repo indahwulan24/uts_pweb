@@ -86,7 +86,8 @@ export default {
 
 <template>
   <div class="text-center">
-    <h1>Masukkan Nomor Surah!</h1>
+    <img src="../assets/alquran.png" alt="logo" width="350">
+    <h1>***Silahkan isi nomor Surah***</h1>
     <input
       v-model="cari"
       class="form-control me-2"
@@ -125,6 +126,6 @@ h2 {
   margin-top: 5px;
   font-weight: bold;
   font-size: 30px;
-  color: #288a52;
+  color: #2d335b;
 }
 </style>
